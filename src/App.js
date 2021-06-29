@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './Components/Home';
+import Menu from './Components/Menu';
+import Cart from './Components/Cart';
+import { useSelector } from 'react-redux';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 function App() {
+  const isCartVisible = useSelector((state) => state.ui.isCartVisible);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className='App'>
+        <Route to='/Home' component={Home} />
+        <Route to='/Menu' component={Menu} exact={true} />
+        {isCartVisible && <Cart />}
+      </div>
+    </BrowserRouter>
   );
 }
 

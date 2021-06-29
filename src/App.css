@@ -148,6 +148,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   justify-content: space-between;
 }
@@ -306,6 +307,24 @@ table{
   margin: 0 10px;
   cursor: pointer;
 }
+.topics th{
+  font-size: 2rem;
+}
+.topics th,.listed-item td{
+  color: aliceblue;
+  list-style: none;
+  font-family: 'Montserrat';
+  text-align: center;
+}
+.listed-item td{
+  padding: 10px 5px;
+  font-size: 1.8rem;
+  justify-self: start;
+}
+.listed-item td:nth-of-type(1){
+  padding: none;
+}
+
 
 
 

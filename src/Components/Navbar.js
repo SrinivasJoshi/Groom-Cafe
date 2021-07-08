@@ -22,25 +22,19 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <div className='logo-div'>
-        <a>
+        <a href='/'>
           <img src={logo} alt='Main-page' />
         </a>
       </div>
       <div className={toggle ? 'nav-items show' : 'nav-items'}>
         <li>
-          <a>
-            <Link to='/Home'>ABOUT</Link>
-          </a>
+          <Link to='/Home'>ABOUT</Link>
         </li>
         <li>
-          <a>
-            <Link to='/Menu'>MENU</Link>
-          </a>
+          <Link to='/Menu'>MENU</Link>
         </li>
         <li>
-          <a>
-            <Link to='/Contact'>CONTACT</Link>
-          </a>
+          <Link to='/Contact'>CONTACT</Link>
         </li>
         <li onClick={toggleCart}>
           <img src={cart} alt='' /> <span>{totalQuantity}</span>

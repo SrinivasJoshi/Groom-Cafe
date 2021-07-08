@@ -16,9 +16,8 @@ const Cart = (props) => {
   // select
   const cartItems = useSelector((state) => state.cart.cards);
   const finalCart = cartItems.map((obj, i) => {
-    const temp = obj.cost.replace('$', '');
-    const temp1 = parseInt(temp);
-    const price = temp1 * obj.quantity;
+    const temp = obj.cost;
+    const price = temp * obj.quantity;
     return (
       <tr className='listed-item' key={i}>
         <td>{obj.name}</td>

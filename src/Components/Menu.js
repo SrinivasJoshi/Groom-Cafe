@@ -1,7 +1,13 @@
 import ratingStar from '../images/star.png';
 import caloriesFire from '../images/fire.png';
+import blackForest from '../images/choco.png';
+import fudgyChocolate from '../images/fudgy-chocolate.png';
+import darkOrange from '../images/dark-orange.png';
+import vanillaForest from '../images/vanilla.png';
+import pineForest from '../images/pineapple-forest.png';
+import mango from '../images/mango-forest.png';
+
 import Navbar from './Navbar';
-import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../store/cart-slice';
 
@@ -17,11 +23,6 @@ const Menu = (props) => {
     };
     dispatch(cartActions.addCard(actionObject));
   };
-  const remover = (e) => {
-    const num = e.target.id;
-    dispatch(cartActions.removeCard(items[num]));
-  };
-
   const items = [
     {
       image: blackForest,
